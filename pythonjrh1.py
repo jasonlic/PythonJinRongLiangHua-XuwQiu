@@ -15,7 +15,7 @@ sh.index=pd.to_datetime(sh.date)
 
 sh['close'].plot(figsize=(16,8))
 # 设置刻度字体大小
-plt.xticks(pd.date_range('1998-01-01','2019-1-1',freq='Y'))
+plt.xticks(pd.date_range('1998-01-01','2020-6-18',freq='Y'))
 plt.yticks(range(1000,6100,420))
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
@@ -90,6 +90,14 @@ plt.annotate('场外配资清理\n场内融资\n分级基金去杠杆',
 plt.annotate('金融去杠杆\n严监管\n中美贸易战\n路在何方？',
     xy=('2017-12-15',3200),
     xytext=('2018-1-1',1600),
+    bbox = dict(boxstyle = 'round,pad=0.5',
+    fc = 'blue', alpha = 0.5),
+    arrowprops=dict(facecolor='k',
+    shrink=0.05),fontsize=12)
+#    肺炎爆发
+plt.annotate('武汉封城',
+    xy=('2020-1-23',3200),
+    xytext=('2020-1-23',4600),
     bbox = dict(boxstyle = 'round,pad=0.5',
     fc = 'blue', alpha = 0.5),
     arrowprops=dict(facecolor='k',
